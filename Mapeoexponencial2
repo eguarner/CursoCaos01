@@ -1,0 +1,18 @@
+import numpy as np
+from matplotlib import pyplot
+
+xmasuno=0
+xinicial=1.342
+iteraciones=80
+for k in np.linspace(0.4,0.9,5):     #definimmos el numero de k's en un rango con decimales
+    t=0
+    x=xinicial
+    while t<iteraciones: 
+        xmasuno=k*x
+        t+=1
+        print t,xmasuno,k, xinicial   #imprime la lista de datos en la terminal
+        pyplot.plot(t,xmasuno,'r.')
+        x=xmasuno
+        
+
+pyplot.show()
